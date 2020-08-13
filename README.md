@@ -29,7 +29,8 @@ resource "docker_container" "nginx" {
 8. ``` tarraform init ```
 9. ``` tarraform apply ```
 
-``` An execution plan has been generated and is shown below.
+```
+An execution plan has been generated and is shown below.
 Resource actions are indicated with the following symbols:
   + create
 
@@ -105,12 +106,12 @@ Apply complete! Resources: 2 added, 0 changed, 0 destroyed.
 
 10. ``` docker ps ```
 
-``` CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                  NAMES
+```
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                  NAMES
 642380f0cca3        08393e824c32        "/docker-entrypoint.…"   57 seconds ago      Up 55 seconds       0.0.0.0:8000->80/tcp   tutorial
-
 ```
 
-1`. ``` terraform destroy ```
+11. ``` terraform destroy ```
 
 
 
