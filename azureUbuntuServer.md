@@ -1,6 +1,6 @@
 
 
-
+```
 # Configure the Azure provider
 provider "azurerm" {
     version = "~>1.32.0"
@@ -107,3 +107,4 @@ storage_os_disk {
     disable_password_authentication = false
   }
 }
+```
