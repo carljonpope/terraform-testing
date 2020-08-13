@@ -28,7 +28,6 @@ resource "docker_container" "nginx" {
 
 8. ``` tarraform init ```
 9. ``` tarraform apply ```
-10. 
 
 ``` An execution plan has been generated and is shown below.
 Resource actions are indicated with the following symbols:
@@ -100,14 +99,18 @@ docker_image.nginx: Creation complete after 17s [id=sha256:08393e824c32d456ff69a
 docker_container.nginx: Creating...
 docker_container.nginx: Creation complete after 2s [id=642380f0cca3e122f377a176c30c9a3ac4e4b78703282f6dbc3b3212ec88704c]
 
-Apply complete! Resources: 2 added, 0 changed, 0 destroyed. ```
+Apply complete! Resources: 2 added, 0 changed, 0 destroyed.
 
-11. ``` docker ps ```
+```
+
+10. ``` docker ps ```
 
 ``` CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                  NAMES
-642380f0cca3        08393e824c32        "/docker-entrypoint.…"   57 seconds ago      Up 55 seconds       0.0.0.0:8000->80/tcp   tutorial ```
+642380f0cca3        08393e824c32        "/docker-entrypoint.…"   57 seconds ago      Up 55 seconds       0.0.0.0:8000->80/tcp   tutorial
 
-12. ``` terraform destroy ```
+```
+
+1`. ``` terraform destroy ```
 
 
 
