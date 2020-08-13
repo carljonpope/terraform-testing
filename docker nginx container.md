@@ -1,6 +1,4 @@
-# terraform-testing
-
-deploy docker nginx container
+# deploy docker nginx container
 
 1. Terraform installed on CentOS VM, requires upgrade - download terraform 0.12.29 executable, copy to /usr/local/bin
 2. ``` chmod 775 terraform ```
