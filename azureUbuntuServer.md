@@ -1,3 +1,6 @@
+
+
+
 # Configure the Azure provider
 provider "azurerm" {
     version = "~>1.32.0"
