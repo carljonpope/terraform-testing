@@ -1,6 +1,8 @@
 # Create resource group in Azure using Azure Cloud Shell & Terraform
 
-1. ``` mkdir rGtest ```
+1. ```  mkdir rGtest 
+        cd rGtest
+```
 2. ``` vi main.tf ```
 3.
 ```
