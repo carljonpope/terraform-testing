@@ -341,3 +341,41 @@ To perform exactly these actions, run the following command to apply:
 
 5. ``` terraform apply newplan ```
 
+```
+azurerm_resource_group.myTfResourceGroup: Creating...
+azurerm_resource_group.myTfResourceGroup: Creation complete after 1s [id=/subscriptions/090ccd18-57c9-4735-84fc-64f9fb9390af/resourceGroups/myTFResourceGroup]
+azurerm_network_security_group.myTfNsg: Creating...
+azurerm_virtual_network.myTfVnet: Creating...
+azurerm_public_ip.myTfPublicIp: Creating...
+azurerm_network_security_group.myTfNsg: Creation complete after 2s [id=/subscriptions/090ccd18-57c9-4735-84fc-64f9fb9390af/resourceGroups/myTFResourceGroup/providers/Microsoft.Network/networkSecurityGroups/myTfNsg]
+azurerm_public_ip.myTfPublicIp: Creation complete after 4s [id=/subscriptions/090ccd18-57c9-4735-84fc-64f9fb9390af/resourceGroups/myTFResourceGroup/providers/Microsoft.Network/publicIPAddresses/myTfPublicIp]
+azurerm_virtual_network.myTfVnet: Still creating... [10s elapsed]
+azurerm_virtual_network.myTfVnet: Creation complete after 12s [id=/subscriptions/090ccd18-57c9-4735-84fc-64f9fb9390af/resourceGroups/myTFResourceGroup/providers/Microsoft.Network/virtualNetworks/myTfVnet]
+azurerm_subnet.myTfSubnet: Creating...
+azurerm_subnet.myTfSubnet: Creation complete after 0s [id=/subscriptions/090ccd18-57c9-4735-84fc-64f9fb9390af/resourceGroups/myTFResourceGroup/providers/Microsoft.Network/virtualNetworks/myTfVnet/subnets/myTfSubnet]
+azurerm_network_interface.myTfNic: Creating...
+azurerm_network_interface.myTfNic: Creation complete after 2s [id=/subscriptions/090ccd18-57c9-4735-84fc-64f9fb9390af/resourceGroups/myTFResourceGroup/providers/Microsoft.Network/networkInterfaces/myTfNic]
+azurerm_virtual_machine.myTfVm: Creating...
+azurerm_virtual_machine.myTfVm: Still creating... [10s elapsed]
+azurerm_virtual_machine.myTfVm: Still creating... [20s elapsed]
+azurerm_virtual_machine.myTfVm: Still creating... [30s elapsed]
+azurerm_virtual_machine.myTfVm: Still creating... [40s elapsed]
+azurerm_virtual_machine.myTfVm: Still creating... [50s elapsed]
+azurerm_virtual_machine.myTfVm: Still creating... [1m0s elapsed]
+azurerm_virtual_machine.myTfVm: Still creating... [1m10s elapsed]
+azurerm_virtual_machine.myTfVm: Still creating... [1m20s elapsed]
+azurerm_virtual_machine.myTfVm: Still creating... [1m30s elapsed]
+azurerm_virtual_machine.myTfVm: Creation complete after 1m36s [id=/subscriptions/090ccd18-57c9-4735-84fc-64f9fb9390af/resourceGroups/myTFResourceGroup/providers/Microsoft.Compute/virtualMachines/myTfVm]
+
+Apply complete! Resources: 7 added, 0 changed, 0 destroyed.
+
+The state of your infrastructure has been saved to the path
+below. This state is required to modify and destroy your
+infrastructure, so keep it safe. To inspect the complete state
+use the `terraform show` command.
+
+State path: terraform.tfstate
+```
+
+6. ``` terraform destroy ```
+
