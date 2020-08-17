@@ -17,5 +17,47 @@ az storage container create --name "cptfstate" --account-name "cptfstate" --acco
 ```
 
 
+Create an environment variable named ARM_ACCESS_KEY with the value of the Azure Storage access key.
+```
+export ARM_ACCESS_KEY= ACCOUNT_KEY
+```
+
+Create a resource group using remote state
+```
+# Configure the Microsoft Azure Provider.
+provider "azurerm" {
+  version = "~>2.20.0"
+  features {}
+}
+
+# configure the backend
+terraform {
+	backend "azurerm" {
+		resource_group_name = 	"terraformState"
+		storage_account_name =	"cptfstate"
+		container_name =	"cptfstate"
+		key =			"terraform.tfstate"
+			}
+	}
 
 
+# Create a resource group
+resource "azurerm_resource_group" "rg" {
+  name     = "test4"
+  location = "uksouth"
+  tags ={
+	Test  = "test"
+	Test2 = "test2"
+	}
+}
+```
+
+```
+terraform init
+```
+
+```
+terraform apply
+```
+
+Resource group created & terraform.tfstate created in storage account
