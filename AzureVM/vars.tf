@@ -2,7 +2,7 @@
 
 variable "location" {}
 
-variable "rgname" {}
+variable "rgName" {}
 
 variable "tags" {
     type = map
