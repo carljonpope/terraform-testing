@@ -56,6 +56,15 @@ resource "azurerm_virtual_machine" "vm1" {
 
   storage_os_disk {
     name              = "${var.vmName}osDisk"
-    caching           = 
+    caching           = "ReadWrite"
+    create_option     = "FromImage"
+    managed_disk_type = "Premium_LRS"
+  }
+
+  storage_image_reference {
+    publisher = var.publisher
+    offer     = var.offer
+    sku       = var.sku
+    version   = var.version
   }
 }
