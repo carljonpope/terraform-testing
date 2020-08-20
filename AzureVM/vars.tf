@@ -4,6 +4,8 @@ variable "location" {}
 
 variable "rgName" {}
 
+variable "vmName" {}
+
 variable "tags" {
     type = map
     default = {
